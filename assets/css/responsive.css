@@ -1340,6 +1340,7 @@
 	.choose-us {
      	flex-wrap: wrap;
 		justify-content: center;
+		text-align: center;
 	}
 	.project-information ul.information-list li {
     	width: 100%;

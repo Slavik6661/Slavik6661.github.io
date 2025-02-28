@@ -111,6 +111,7 @@
         </div>
       </div>
     </div>
+
     <div class="mobile-nav" id="mobile-nav">
       <div class="res-log">
         <a href="index.html">
@@ -118,17 +119,28 @@
         </a>
       </div>
       <ul>
-        <li class="menu-item-has-children">
-          <a href="javascript:void(0)">Home</a>
-          <ul class="sub-menu">
-            <li><a href="index.html">home 1</a></li>
-            <li><a href="index-2.html">home 2</a></li>
-            <li><a href="index-3.html">home 3</a></li>
-          </ul>
-        </li>
         <li>
-          <a href="#">about</a>
+          <a  href="#about-Us" class="menu-link">About Us</a>
         </li>
+
+        <li>
+          <a href="#Why-Choose-Us" class="menu-link">Why Choose Us</a>
+        </li>
+
+        <li>
+          <a href="#Pricing-Table" class="menu-link">Pricing Table</a>
+        </li>
+
+        <li>
+          <a href="#Testimonials" class="menu-link">Testimonials</a>
+        </li>
+
+       
+
+
+        <!-- <li>
+          <a href="#">about</a>
+        
         <li class="menu-item-has-children">
           <a href="javascript:void(0)">Research</a>
           <ul class="sub-menu">
@@ -156,9 +168,10 @@
         <li>
           <a href="contact.html">Contact</a>
         </li>
-      </ul>
+      </ul> -->
       <a href="JavaScript:void(0)" id="res-cross"></a>
     </div>
+
   </header>
   <section class="hero-section">
     <div class="container">
@@ -226,7 +239,7 @@
         </div>
         <div class="col-lg-6">
           <div class="about-text heading ">
-            <span># About Us</span>
+            <span id="about-Us"># About Us</span>
             <h2>Excellence in Healthcare Rooted in Trust.</h2>
             <p>For years, we’ve dedicated ourselves to delivering exceptional medical care with integrity, compassion,
               and respect. Our commitment to excellence goes beyond treatments—we aim to build lasting relationships
@@ -372,7 +385,7 @@
         </div>
         <div class="col-lg-6">
           <div class="heading">
-            <span># Why Choose Us</span>
+            <span id="Why-Choose-Us"># Why Choose Us</span>
             <h2>About Application.</h2>
             <p>we believe healthcare is not just about treating illnesses—it’s about caring for people. With a perfect
               balance of compassion and expertise, our team is dedicated to providing exceptional medical care while
@@ -389,7 +402,7 @@
                   stroke="white" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </i>
-            <div>
+            <div class="choose-us-text">
               <h4>Expert Professionals</h4>
               <p>Our highly skilled doctors, nurses, and specialists bring years of experience and a commitment to
                 excellence in every service we provide.</p>
@@ -403,7 +416,7 @@
                   stroke="white" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </i>
-            <div>
+            <div class="choose-us-text">
               <h4>Beyond treatments</h4>
               <p>Our highly skilled doctors, nurses, and specialists bring years of experience and a commitment to
                 excellence in every service we provide.</p>
@@ -416,7 +429,7 @@
   <section class="gap section-pricing" style="background-image: url(assets/img/graph.png);">
     <div class="container">
       <div class="heading two">
-        <span># Pricing Table</span>
+        <span id ="Pricing-Table"># Pricing Table</span>
         <h2>Flexible Options for Every Patient.</h2>
       </div>
       <div class="row">
@@ -574,10 +587,10 @@
     </ul>
   </section>
 
-  <section class="gap">
+  <section class="comments">
     <div class="container">
       <div class="heading two">
-        <span># Testimonials</span>
+        <span id="Testimonials"># Testimonials</span>
         <h2>What Our Patients Say?</h2>
       </div>
       <div class="swiper review-slider">
@@ -636,13 +649,140 @@
   <footer class="no-bottom">
     <div class="container">
       <div class="copyright">
-        <p>Copyright © 2024 <span>Maula.</span> All Rights Reserved.</p>
+        <p>Sjp Asia group  © 2025 <span>Maula.</span> All Rights Reserved.</p>
         <ul>
-          <li><a href="./privacy-policy.html">Privacy policy</a></li>
+          <li><a class="privacy-policy-btn">Privacy policy</a></li>
         </ul>
       </div>
     </div>
   </footer>
+
+  <section id="privacy-policy-modal" class="privacy-policy-modal">
+    
+    <header>
+      <button class="close-search"><i class="fa-solid fa-xmark"></i></button>
+      <h1>Privacy Policy</h1>
+      <p>Sugar Pulse LLC</p>
+    </header>
+
+    <main>
+      <section>
+        <p>
+          This Privacy Policy describes how we, Sugar Pulse LLC, collect, use,
+          and protect your personal information when using our site and
+          services, including registration. We value your privacy and
+          guarantee that your data is protected in accordance with applicable
+          data protection laws.
+        </p>
+      </section>
+
+      <section>
+        <h2>1. Collection and Use of Information</h2>
+        <p>
+          We collect the minimum amount of data necessary to provide our
+          services:
+        </p>
+        <ul>
+          <li>
+            <strong>Phone Number:</strong> When registering, we only use your
+            phone number to identify you as a user, send you a one-time
+            password (OTP) to confirm your identity, and grant you access to
+            the site’s functionality.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>2. We Do Not Store Your Phone Number</h2>
+        <p>
+          We do not store users’ phone numbers in our database. We use the
+          number exclusively for:
+        </p>
+        <ul>
+          <li>User identification.</li>
+          <li>Sending a one-time password (OTP) for login verification.</li>
+        </ul>
+        <p>
+          After successful authorization, the phone number is not saved in our
+          system.
+        </p>
+      </section>
+
+      <section>
+        <h2>3. Use of Information</h2>
+        <p>
+          The collected information is used solely for the following purposes:
+        </p>
+        <ul>
+          <li>User identification during registration and login.</li>
+          <li>Sending a one-time password (OTP) to verify identity.</li>
+          <li>
+            Ensuring the correct operation of the site and providing necessary
+            services.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. Data Security</h2>
+        <p>
+          We take all possible measures to protect users’ data, including:
+        </p>
+        <ul>
+          <li>Encryption of transmitted information.</li>
+          <li>Compliance with security standards and best practices.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>5. Data Transfer to Third Parties</h2>
+        <p>
+          We do not share your phone number or other personal data with third
+          parties, except in the following cases:
+        </p>
+        <ul>
+          <li>When required by law.</li>
+          <li>
+            When necessary for the provision of services, such as interacting
+            with Telegram services to send OTPs.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6. User Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+          <li>
+            Request information about the data we collect and process about
+            you.
+          </li>
+          <li>Request deletion or correction of your data.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>7. Changes to the Privacy Policy</h2>
+        <p>
+          We reserve the right to modify this Privacy Policy. Any changes will
+          be published on this page. Please check it periodically to stay
+          updated on the latest terms and conditions.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. Contact Information</h2>
+        <p>
+          If you have any questions or comments regarding our Privacy Policy,
+          please contact us via Telegram technical support.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Sugar Pulse LLC. All rights reserved.</p>
+    </footer>
+  </section>
   <!-- search-popup -->
   <div class="search-popup">
     <button class="close-search"><i class="fa-solid fa-xmark"></i></button>

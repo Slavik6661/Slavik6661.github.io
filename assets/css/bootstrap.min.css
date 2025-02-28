@@ -877,6 +877,8 @@ progress {
         display: flex;
         justify-content: center;
         justify-self: center;
+        text-align: center;
+        padding: 10px;
     }
     
     .img-second {

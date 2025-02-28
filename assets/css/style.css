@@ -572,7 +572,7 @@ li.menu-item-has-children.active {
     position: absolute;
     top: 15px;
     right: 20px;
-    color: var(--common-colour);
+    color: var(--theme-colour);
     font-size: 28px;
 }
 #mobile-menu i {
@@ -935,6 +935,19 @@ span.flaticon-multiply i {
      animation: 500ms ease-in-out 0s normal none 1 running scrollToTop;
      transition: 0.3s; 
  } 
+
+ @media screen and (max-width:1600px) {
+    #scroll-percentage.active{
+        bottom: 75px;
+    } 
+ }
+
+ @media screen and (max-width:500px) {
+    #scroll-percentage.active{
+        bottom: 105px;
+    }
+ }
+
  #scroll-percentage-value {
      height: calc(100% - 6px);
      width: calc(100% - 6px);
@@ -2603,7 +2616,6 @@ form.appiontment textarea {
     color: #000000;
 }
 
-
 .appiontment-section-modal .close-search {
     top: 2%;
     position: absolute;
@@ -2626,6 +2638,9 @@ form.appiontment textarea {
 @media screen and (max-width: 600px) {
     .appiontment-section-modal .close-search {
         left: 84%;
+    }
+    .shaps li:nth-child(1) {
+        display: none;
     }
 }
 
@@ -4478,6 +4493,129 @@ ul.pagination li a:hover {
     color: #fff;
     border-color: var(--theme-colour);
 } 
+/* popup pivacy policy */
+.privacy-policy-modal  {
+    display: none; /* По умолчанию скрыто */
+    position: fixed; /* Положение фиксированное */
+    z-index: 1000; /* Перед всеми элементами */
+    left: 0;
+    top: 0;
+    width: 100%; /* Занимает всю ширину экрана */
+    height: 100%; /* Занимает всю высоту экрана */
+    background-color: #ffffff; /* Полупрозрачный фон */
+    overflow: auto; /* Включить прокрутку */
+
+    .close-search {
+        top: 10%;
+        position: absolute;
+        left: 90%;
+        margin: 0 auto;
+        border-radius: 50%;
+        text-align: center;
+        background-color: #70e5ff;
+        width: 50px;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        -webkit-transition: all 500ms ease;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: #fff;
+        border: 0;
+    }
+
+
+    header {
+        background-color: #07c2eb;
+        color: #fff;
+        text-align: center;
+        padding: 0px 0;
+    }
+    
+    header h1 {
+        margin: 0;
+        font-size: 28px;
+    }
+    
+    header p {
+        margin: 5px 0 0;
+        font-size: 16px;
+    }
+    
+    main {
+        max-width: 800px;
+        margin: 60px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    section {
+        margin-bottom: 20px;
+    }
+    
+    h2 {
+        color: #07c2eb;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+        margin-top: 20px;
+    }
+    
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+    
+    ul li {
+        margin-bottom: 10px;
+    }
+    
+    strong {
+        color: #333;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #07c2eb;
+        color: #fff;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    footer p {
+        margin: 0;
+        font-size: 14px;
+    }
+    
+    /* Адаптивность */
+    @media (max-width: 768px) {
+        main {
+            padding: 15px;
+        }
+    
+        header h1 {
+            font-size: 24px;
+        }
+    
+        header p {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .close-search {
+            top: 10%;
+            left: 86%;
+        }
+    }
+}
+.comments {
+    margin-top: 120px;
+    margin-bottom:0;
+}
+
 /* 83. transition time */
 .emergency-call a,.pricing-plan,
 .blog-admin a,ul.blog-comment-list li a,ul.information-list a,ul.pagination li a,

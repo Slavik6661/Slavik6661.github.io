@@ -499,7 +499,6 @@ $("#show").on("click", function () {
 });
 
 /* 17. modle */
-
 $(document).ready(function () {
   $(".openModalBtn").on("click", function (e) {
     e.preventDefault();
@@ -518,4 +517,65 @@ $(document).ready(function () {
       $("#modal").fadeOut(); // Скрываем модальное окно
     }
   });
+});
+
+/* 18. modle private-policy */
+$(document).ready(function () {
+  $(".privacy-policy-btn").on("click", function (e) {
+    e.preventDefault();
+    $("#scroll-percentage.active").hide();
+    $("#privacy-policy-modal").fadeIn();
+  });
+
+  $(".close-search").on("click", function (e) {
+    e.preventDefault();
+    console.log("click", $("#privacy-policy-modal").fadeOut());
+    $("#privacy-policy-modal").fadeOut(); // Скрываем модальное окно
+  });
+
+  $(document).on("click", function (e) {
+    if ($(e.target).is("#privacy-policy-modal")) {
+      $("#privacy-policy-modal").fadeOut(); // Скрываем модальное окно
+    }
+  });
+});
+
+$(document).ready(function () {
+  // Обработка кликов по ссылкам
+  $(".menu-link").on("click", function (e) {
+    e.preventDefault(); // Отменяем стандартное поведение
+
+    // Получаем ID целевого элемента
+    const targetId = $(this).attr("href");
+    const targetElement = $(targetId);
+
+    // Плавно скроллим к элементу
+    $("html, body").animate(
+      { scrollTop: targetElement.offset().top },
+      800 // Длительность анимации (в миллисекундах)
+    );
+  });
+
+  // Активация пунктов меню при скролле
+  function updateActiveLink() {
+    let currentSection = "";
+    $("#mobile-nav").removeClass("open");
+    // Находим видимый раздел
+    $(".section").each(function () {
+      const sectionTop = $(this).offset().top - 80; // Корректируем на высоту шапки
+      const sectionHeight = $(this).outerHeight();
+
+      if ($(window).scrollTop() >= sectionTop - sectionHeight / 2) {
+        currentSection = $(this).attr("id");
+      }
+    });
+
+    // Обновляем класс активного пункта меню
+    $(".menu-link").removeClass("active");
+    $("[href='#" + currentSection + "']").addClass("active");
+  }
+
+  // Вызываем функцию при скролле
+  $(window).on("scroll", updateActiveLink);
+  updateActiveLink(); // Инициализация при загрузке страницы
 });
