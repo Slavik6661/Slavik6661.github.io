@@ -502,6 +502,7 @@ $("#show").on("click", function () {
 $(document).ready(function () {
   $(".openModalBtn").on("click", function (e) {
     e.preventDefault();
+    $("#scroll-percentage.active").hide();
     $("body").addClass("no-scroll"); // Добавляем класс для блокировки скролла
     $("#modal").fadeIn();
   });
@@ -510,11 +511,13 @@ $(document).ready(function () {
     e.preventDefault();
     console.log("click", $("#modal").fadeOut());
     $("#modal").fadeOut(); // Скрываем модальное окно
+    $("#scroll-percentage.active").show();
   });
 
   $(document).on("click", function (e) {
     if ($(e.target).is("#modal")) {
       $("#modal").fadeOut(); // Скрываем модальное окно
+      $("#scroll-percentage.active").show();
     }
   });
 });
