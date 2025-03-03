@@ -4611,10 +4611,38 @@ ul.pagination li a:hover {
         }
     }
 }
-.comments {
-    margin-top: 120px;
+
+/* .comments {
+    margin-top: 60px;
     margin-bottom:0;
+} */
+
+@media screen and (min-width: 1200px) {
+    .comments {
+        padding-top: 120px;
+    }
+    
 }
+
+@media screen and (max-width: 1200px) {
+    .comments {
+        padding-top: 100px;
+    }   
+} 
+
+@media screen and (max-width: 993px) {
+    .comments {
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 576px) {
+    .comments {
+        padding-top: 60px;
+    }
+}
+
+
 
 /* 83. transition time */
 .emergency-call a,.pricing-plan,
